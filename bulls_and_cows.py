@@ -76,6 +76,3 @@ while pocet_pokusu > 0:
         print(f"Tvůj tip nesplňuje podmínky - CHYBA:{chybovnik[test(rozlozeny_tip)-1]}")
 end_time = time.time()
 print("Hádání ti trvalo {} sekund".format(end_time - start_time))
-
-
-"""pocet_pokusu = int(input("Zvol si max počet pokusů dle obtížnosti: \n1-10. Borec\n11-20.Bojovnik\n21-30.Houzvicka  "))"""
