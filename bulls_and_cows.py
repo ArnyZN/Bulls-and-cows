@@ -18,8 +18,11 @@ def test(testovane_cislo):
             return(2)
         elif cislice.isdigit() != True:
             return(3)
+        elif index > 3:
+            return(4)
         else:
             cisilka+=cislice
+        
     return(0)
 def bulls_cows (hodnota1, hodnota2):
     if hodnota1 > 1 or hodnota1 == 0:
@@ -44,12 +47,13 @@ print('''Krátká pravidla:
   pohlídám a upozorním tě na ně)
 Hodně štěstí!!''')
 print("*" * len("Zdravím uživateli. Zahrajeme si hru bulls and cows."))
-chybovnik = ["zacina na 0", "opakujici se cislo", "spatny znak (pismeno)"]
+chybovnik = ["zacina na 0", "opakujici se cislo", "spatny znak (pismeno)", "prilis dlouhy tip"]
 nahodne_cislo = random.randint(1000, 9999)
 rozlozene_cislo = tuple(enumerate(str(nahodne_cislo)))
 while test(rozlozene_cislo) != 0:
     nahodne_cislo = random.randint(1000, 9999)
     rozlozene_cislo = tuple(enumerate(str(nahodne_cislo)))
+print(f"Hledané číslo {nahodne_cislo}")
 pocet_pokusu = 50
 start_time = time.time()
 while pocet_pokusu > 0:
